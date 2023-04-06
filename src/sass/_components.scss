@@ -1,3 +1,45 @@
 .card {
   width: 100%;
 }
+
+.form {
+  justify-content: center;
+  &-search {
+    display: flex;
+    box-shadow: 0px 0px 3px 0px #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    // width: 100%;
+    width: 30rem;
+  }
+  &-input {
+    flex: auto;
+    // text-align: center;
+
+    background-color: var(--weather-main-bg-color);
+    border: none;
+    font-size: 1.1rem;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--weather-second-bg-color);
+    font-size: 1rem;
+    // font-weight: 700;
+    padding: 0.5rem 1rem;
+    // width: 5rem;
+    cursor: pointer;
+
+    & svg {
+      fill: var(--weather-font-color);
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
