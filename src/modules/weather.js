@@ -31,3 +31,8 @@ const changeUnit = async function (unit) {
     cardView.renderError(error.message);
   }
 };
+
+export const init = function () {
+  navView.onSubmit(getWeather);
+  navView.onClick(changeUnit);
+};
