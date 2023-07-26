@@ -19,6 +19,10 @@
   color: var(--weather-font-color);
 }
 
+#container.hidden {
+  display: none;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
