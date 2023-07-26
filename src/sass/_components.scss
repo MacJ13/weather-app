@@ -1,5 +1,6 @@
 .card {
   width: 100%;
+  color: var(--weather-font-color);
 }
 
 .form {
@@ -44,10 +45,29 @@
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
 .weather {
   &-main {
     width: 100%;
-    color: var(--weather-font-color);
   }
 
   &-location {
@@ -94,6 +114,12 @@
   &-col {
     & > *:not(:last-child) {
       margin-bottom: 0.5rem;
+    }
+  }
+
+  &-cell {
+    & span {
+      font-weight: 700;
     }
   }
 
