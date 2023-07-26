@@ -10,8 +10,6 @@ export class Card {
   }
 
   async renderCard(data, unit) {
-    this.container.classList.remove("hidden");
-
     const cardEl = document.createElement("div");
     cardEl.className = "card weather-card";
 
@@ -125,7 +123,6 @@ export class Card {
   }
 
   renderError(msg) {
-    this.container.classList.remove("hidden");
     this.container.textContent = msg;
   }
 }

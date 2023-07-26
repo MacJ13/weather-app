@@ -1,6 +1,14 @@
 .card {
-  width: 100%;
+  margin-top: 0rem;
+  background-color: #ffffff50;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 3px 0px #ffffff;
+
   color: var(--weather-font-color);
+  padding: 2rem;
+
+  max-width: 30rem;
+  width: 100%;
 }
 
 .form {
