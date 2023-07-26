@@ -19,3 +19,15 @@ const getWeather = async function () {
     cardView.renderError(error.message);
   }
 };
+
+const changeUnit = async function (unit) {
+  api.setUnit(unit);
+  try {
+    if (!api.getLocation()) return;
+    const { main } = await api.getData();
+    cardView.changeUnits(unit, main);
+  } catch (error) {
+    console.error(error.message);
+    cardView.renderError(error.message);
+  }
+};
