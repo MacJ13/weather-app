@@ -64,27 +64,49 @@
   }
 
   &-units {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    gap: 0.5rem;
+    width: 5rem;
+    height: 2rem;
+
+    border-radius: 15px;
+    // padding: 0 0.75rem;
+
+    border: 2px solid var(--weather-font-color);
+    overflow: hidden;
+  }
+
+  &-active-unit {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    background-color: var(--weather-font-color);
+    z-index: -1;
+
+    transform: translateX(-50%);
+
+    transition: transform 0.5s;
   }
 
   &-btn {
-    font-size: 1.1rem;
-
+    font-size: 1rem;
+    font-weight: 600;
     border: none;
     background-color: transparent;
+    height: 100%;
+    width: 50%;
+
     cursor: pointer;
 
+    transition: background-color 0.5s;
+
     &.active {
-      background-color: var(--weather-font-color);
       color: #fff;
-      height: 2.25rem;
-      width: 2.25rem;
-      border-radius: 50%;
-      font-size: 1.2rem;
     }
   }
 }

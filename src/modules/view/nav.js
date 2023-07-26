@@ -2,6 +2,7 @@ export class Nav {
   formEl = document.querySelector(".form");
   inputEl = document.getElementById("search");
   unitEl = document.querySelector(".nav-units");
+  unitActiveEl = document.querySelector(".nav-active-unit");
 
   getSearchValue() {
     const location = this.inputEl.value;
@@ -23,6 +24,12 @@ export class Nav {
     });
   }
 
+  changeUnitActive(unit) {
+    if (unit == "metric") {
+      this.unitActiveEl.style.transform = `translateX(-50%)`;
+    } else this.unitActiveEl.style.transform = `translateX(50%)`;
+  }
+
   onClick(callback) {
     this.unitEl.addEventListener("click", (e) => {
       if (e.target.nodeName !== "BUTTON") return;
@@ -30,6 +37,7 @@ export class Nav {
       if (e.target.classList.contains("active")) return;
 
       const { unit } = e.target.dataset;
+      this.changeUnitActive(unit);
       this.toggleUnitButtons();
       callback(unit);
     });
