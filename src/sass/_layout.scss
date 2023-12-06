@@ -11,6 +11,10 @@
   font-size: 1.2rem;
   color: var(--weather-font-color);
   width: 100%;
+
+  @media screen and (max-width: 800px) {
+    padding: 5rem 5%;
+  }
 }
 
 #container.hidden {
@@ -33,10 +37,19 @@
     display: flex;
   }
 
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   &-logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
+    @media screen and (max-width: 800px) {
+      gap: 1rem;
+    }
   }
 
   &-title {
@@ -44,6 +57,10 @@
     word-spacing: 0.25rem;
     letter-spacing: 1px;
     color: var(--weather-font-color);
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.75rem;
+    }
   }
 
   &-icon {
@@ -51,6 +68,11 @@
     width: 2.5rem;
     height: 2.5rem;
     fill: var(--weather-font-color);
+
+    @media screen and (max-width: 800px) {
+      width: 3.75rem;
+      height: 3.75rem;
+    }
   }
 
   &-mode {
