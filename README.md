@@ -4,7 +4,7 @@
 
 Weather App created with Html, Sass, Javascript and Webpack.
 <br />
-It is used data from OpenWeatherMap API
+I used data from OpenWeatherMap API
 
 ## Link
 
